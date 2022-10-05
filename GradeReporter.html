@@ -4,13 +4,25 @@
 </head>
 <body style="text-align:center;">
 <h1 >Grade Generator</h1>
-Enter Your Percentage:   <input type="number" id="percentage" name="percentage" min="0" max="100"><br><br>
+Enter Your marks   
+Maths:<input type="number" id="mathsm"  min="0" max="100"><br><br>
+Marathi:<input type="number" id="marathim"  min="0" max="100"><br><br>
+hindi:<input type="number" id="hindim"  min="0" max="100"><br><br>
+Science:<input type="number" id="sciencem"  min="0" max="100"><br><br>
+Socail Science:<input type="number" id="socialm" min="0" max="100"><br><br>
+English:<input type="number" id="englishm"  min="0" max="100"><br><br>
 <button onclick="Calc()">Show My gradge</button>
 </form>
 <script>
     function Calc(){
 
-        var a=document.getElementById("percentage").value;
+        var s1=document.getElementById("mathsm").value;
+        var s2=document.getElementById("marathim").value;
+        var s3=document.getElementById("hindim").value;
+        var s4=document.getElementById("sciencem").value;
+        var s5=document.getElementById("socialm").value;
+        var s6=document.getElementById("englishm").value;
+        let a=((parseInt(s1)+parseInt(s2)+parseInt(s3)+parseInt(s4)+parseInt(s5)+parseInt(s6))*100)/600;
         if(a<=100 && a>=90)
         {
             
@@ -36,7 +48,7 @@ Enter Your Percentage:   <input type="number" id="percentage" name="percentage" 
         {
             document.write("Your grade is C");
         }
-        else
+        else if(a<40 && a>=0)
         {
             document.write("Your  are Fail");
         }
